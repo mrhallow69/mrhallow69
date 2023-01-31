@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3 align="center">Book Details</h3>
+<table align="center">
+  <tr>
+    <th>ID</th>
+    <th>BOOK NAME</th>
+    <th>Author NAME</th>
+    <th>Course NAME</th>
+  </tr>
+  {% for i in data1 %}
+    <tr>
+       <td>{{i.id}}</td>
+       <td>{{i.Book_Name}}</td>
+       <td>{{i.Author_Name}}</td>
+       <td>{{i.Course_id}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

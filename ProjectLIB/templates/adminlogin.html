@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 align="center">The Login Page</h2>
+<form action="adminlogdata" method="post">
+    {% csrf_token %}
+<table align="center">
+    <tr>
+        <td>Userid:</td>
+        <td><input type="text" name="txtuid"></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td><input type="password" name="txtpwd"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="txtsum" value="Login"></td>
+        <td><a href="{% url 'adregdata' %}">AdminSignup</a></td>
+    </tr>
+</table>
+</form>
+</body>
+</html>

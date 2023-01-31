@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="main" method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>Student Name:</td>
+            <td><input type="text" name="txtnm" ></td>
+        </tr>
+        <tr>
+            <td>PHNO:</td>
+            <td><input type="number" name="txtnu"></td>
+        </tr>
+        <tr>
+            <td>Semister:</td>
+            <td><input type="number" name="txtsem"></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="txtpsw"></td>
+        </tr>
+        <tr>
+            <td>Coursename:</td>
+            <td><select name="txtcou">
+                {% for i in Course_data %}
+                <option>{{i.Course_Name}}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+        <tr>
+            <td>Submit:</td>
+            <td><input type="submit" name="sub"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

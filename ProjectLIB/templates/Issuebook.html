@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="issuebook" method="post">
+  {% csrf_token %}
+  <table align="center">
+    <tr>
+      <td>Student Name:</td>
+      <td><input type="text" name="name"></td>
+    </tr>
+    <tr>
+      <td>Book Name:</td>
+      <td><select name="book">
+        {% for i in Book_data %}
+        <option>{{i.Book_Name}}</option>
+        {% endfor %}
+      </select></td>
+    </tr>
+    <tr>
+      <td>Start date:</td>
+      <td><input type="date" name="sdate"></td>
+    </tr>
+    <tr>
+      <td>End date:</td>
+      <td><input type="date" name="edate"></td>
+    </tr>
+  </table>
+  <table align="center">
+    <tr>
+      <td>
+        <input type="submit">
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>

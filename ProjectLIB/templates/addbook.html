@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="addbook" method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>Bookname:</td>
+            <td><input type="text" name="txtbook"></td>
+        </tr>
+        <tr>
+            <td>Authorname:</td>
+            <td><input type="text" name="Author"></td>
+        </tr>
+        <tr>
+            <td>Course:</td>
+            <td><select name="cour">
+                {% for i in Course_data %}
+                <option>{{i.Course_Name}}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+    </table>
+    <table align="center">
+        <tr>
+            <td><input type="submit" name="Sumit"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

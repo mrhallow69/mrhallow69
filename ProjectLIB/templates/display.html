@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<h2>Student details</h2>
+<table align="center">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Phno</th>
+    <th>Semester</th>
+    <th>Password</th>
+    <th>CourseName</th>
+  </tr>
+  {% for i in data %}
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.Stud_Name}}</td>
+    <td>{{i.Stud_Phno}}</td>
+    <td>{{i.Stud_Sems}}</td>
+    <td>{{i.Stud_Password}}</td>
+    <td>{{i.Course_Name}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
