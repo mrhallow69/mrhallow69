@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="main" method="post">
+    {% csrf_token %}
+    <table align="center">
+        <tr>
+            <td>NAME:</td>
+            <td><input type="text" name="txtname" ></td>
+        </tr>
+        <tr>
+            <td>AGE:</td>
+            <td><input type="number" name="txtage" ></td>
+        </tr>
+        <tr>
+            <td>PHNO:</td>
+            <td><input type="number" name="txtphno" ></td>
+        </tr>
+        <tr>
+            <td>Course:</td>
+
+            <td><select name="txtcou">
+                {% for i in Course_data %}
+                   <option>{{i.Course_Name}}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><select name="txtcity">
+                {% for i in City_data %}
+                    <option>{{i.City_Name}}</option>
+                {% endfor %}
+            </select></td>
+        </tr>
+    </table>
+    <table align="center">
+        <tr>
+            <td><input type="submit" name="txtsub"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
